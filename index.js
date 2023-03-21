@@ -6,6 +6,10 @@ const PORT = process.env.PORT || 3030;
 // your code
 app.use(cors())
 
+app.use('/',(req,res)=>{
+   res.send('hi');
+})
+
 const reader = require('xlsx')
 const file = reader.readFile('data.xlsx')
   
