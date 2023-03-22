@@ -1,9 +1,8 @@
 const express = require("express");
-const app = express();
 var cors = require('cors');
+const app = express();
 const PORT = process.env.PORT || 3030;
 
-// your code
 app.use(cors())
 
 const reader = require('xlsx')
@@ -28,6 +27,6 @@ app.listen(PORT, () => {
 });
 
 
-// app.use('/',(req,res)=>{
-//   res.send(data);
-// })
+app.use('/',(req,res)=>{
+  res.send(data);
+})
